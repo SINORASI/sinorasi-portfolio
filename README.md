@@ -1,15 +1,17 @@
-# Team Portfolio
+# SINORASI Team Portfolio
 
-A beautiful, dark-themed portfolio page showcasing 5 team members with an orange color scheme.
+A modern, dark-themed portfolio showcasing the SINORASI team from SMKN2SGS - passionate innovators building the future of school websites with expertise in DevOps, design, business analysis, and content creation.
 
 ## Features
 
-- 🎨 **Dark Theme**: Always-on dark mode with orange accents
+- 🎨 **Dark Theme**: Modern dark mode with orange accents
 - 🔤 **Roboto Font**: Clean, modern typography
-- 🎯 **Responsive Design**: Works on all device sizes
-- ✨ **Interactive Social Icons**: Hover effects with smooth color transitions
+- 🎯 **Responsive Design**: Optimized for all device sizes
+- ✨ **Smooth Animations**: Framer Motion entrance animations and hover effects
 - 🧩 **Shadcn UI**: Built with shadcn/ui components
 - 🎭 **Lucide Icons**: Beautiful React icons
+- 👥 **Team Showcase**: Interactive team member cards with social links
+- 🏢 **Service Portfolio**: Professional service offerings display
 
 ## Tech Stack
 
@@ -70,10 +72,16 @@ The orange theme is defined in `app/globals.css`. To change the primary color, m
 
 ```css
 :root {
-  --primary: #f97316; /* Change this hex color */
+  --primary: #f97316; /* Current orange color */
   --ring: #f97316; /* Match with primary */
 }
 ```
+
+Alternative color options:
+- Blue: `#3b82f6`
+- Green: `#10b981`
+- Purple: `#8b5cf6`
+- Red: `#ef4444`
 
 ## Card Layout
 

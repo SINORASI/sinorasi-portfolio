@@ -1,4 +1,4 @@
-"use client"
+                  "use client";
 
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
@@ -36,59 +36,56 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
   };
 
   return (
-    <Card className="w-full max-w-[32rem] h-96 flex-shrink-0 bg-card/50 backdrop-blur border-border/50 overflow-hidden hover:border-primary/30 transition-all duration-300">
-      <div className="flex flex-row gap-3 sm:gap-4 h-full">
-        {/* Left: Image */}
-        <div className="relative w-48 sm:w-64 h-full flex-shrink-0 overflow-hidden">
+    <Card className="w-[480px] aspect-[5/4] flex-shrink-0 bg-card/80 backdrop-blur-sm border-border/30 overflow-hidden hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-500 group">
+      <div className="flex flex-col lg:flex-row gap-2 h-full">
+        {/* Image */}
+        <div className="relative w-full lg:aspect-[9/16] lg:w-auto h-64 lg:h-full lg:flex-shrink-0 overflow-hidden">
           <Image
             src={member.image}
             alt={member.name}
             fill
-            className="object-cover"
-            sizes="(max-width: 640px) 192px, 256px"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 224px, 256px"
           />
+          <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-transparent to-card/20" />
         </div>
 
-        {/* Right: Content */}
-        <div className="flex flex-col gap-3 sm:gap-4 flex-1 min-w-0 py-4 sm:py-6 pr-4 sm:pr-6">
-          {/* Top: Name, Role and Description */}
-          <div className="space-y-2 sm:space-y-3">
-            <h2 className="text-lg sm:text-xl font-bold text-foreground break-words">{member.name}</h2>
-            <p className="text-sm sm:text-base text-primary font-medium break-words">{member.role}</p>
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed break-normal">
+        {/* Content */}
+        <div className="flex flex-col gap-4 flex-1 min-w-0 p-4 lg:py-6 lg:pr-6">
+          {/* Name, Role and Description */}
+          <div className="space-y-2 flex-1">
+            <h2 className="text-lg sm:text-xl font-bold text-foreground break-words group-hover:text-primary transition-colors duration-300">{member.name}</h2>
+            <p className="text-sm text-primary font-semibold break-words">{member.role}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed break-normal">
               {member.description}
             </p>
           </div>
 
-          {/* Bottom: Social Media Icons */}
-          <div className="mt-auto">
-            <div className="flex gap-3">
-              {member.socials.map((social, index) => {
-                const Icon = Icons[social.icon as keyof typeof Icons] as Icons.LucideIcon;
-                const hoverColor = getHoverColor(social.icon);
-                return (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                    onMouseEnter={() => setHoveredIcon(index)}
-                    onMouseLeave={() => setHoveredIcon(null)}
-                    className="transition-all duration-300"
-                  >
-                    <Icon
-                      className={`w-6 h-6 transition-all duration-300 ${
-                        hoveredIcon === index
-                          ? "scale-110"
-                          : "text-muted-foreground/40"
-                      }`}
-                      style={hoveredIcon === index ? { color: hoverColor } : undefined}
-                    />
-                  </a>
-                );
-              })}
-            </div>
+          {/* Social Media Icons */}
+          <div className="flex gap-3 mt-4">
+            {member.socials.map((social, index) => {
+              const Icon = Icons[social.icon as keyof typeof Icons] as Icons.LucideIcon;
+              const hoverColor = getHoverColor(social.icon);
+              return (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  onMouseEnter={() => setHoveredIcon(index)}
+                  onMouseLeave={() => setHoveredIcon(null)}
+                  className="p-2 rounded-full bg-secondary/50 hover:bg-secondary transition-all duration-300 flex-shrink-0"
+                >
+                  <Icon
+                    className={`w-5 h-5 transition-all duration-300 ${
+                      hoveredIcon === index ? "scale-110" : "text-muted-foreground"
+                    }`}
+                    style={hoveredIcon === index ? { color: hoverColor } : undefined}
+                  />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
