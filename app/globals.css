@@ -5,7 +5,7 @@
   --foreground: #ededed;
   --card: #1a1a1a;
   --card-foreground: #ededed;
-  --primary: #f97316;
+  --primary: #3b82f6;
   --primary-foreground: #ffffff;
   --secondary: #27272a;
   --secondary-foreground: #ededed;
@@ -15,7 +15,7 @@
   --accent-foreground: #ededed;
   --border: #27272a;
   --input: #27272a;
-  --ring: #f97316;
+  --ring: #3b82f6;
   --radius: 0.5rem;
 }
 
