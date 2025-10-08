@@ -42,7 +42,7 @@ const teamMembers: TeamMember[] = [
     name: "Moch Raiyan Al Fikri",
     role: "DevOps Engineer",
     description:
-      "Spesialis dalam mengotomatisasi infrastruktur dan pipeline deployment. Ahli dalam CI/CD, containerization, Kubernetes, dan platform cloud untuk memastikan operasi yang lancar dan andal.",
+      "Spesialis dalam mengotomatisasi infrastruktur dan pipeline deployment. Ahli dalam CI/CD, containerization, dan Kubernetes.",
     image: "/raiyan.webp",
     socials: [
       { icon: "Github", url: "https://github.com/mochraiyan", label: "GitHub" },
@@ -50,7 +50,7 @@ const teamMembers: TeamMember[] = [
     ],
   },
   {
-    name: "Muhammad Miftahul Khoironi",
+    name: "Moch Miftahul Khoironi",
     role: "Digital Business Analyst",
     description:
       "Menganalisis metrik bisnis digital dan tren pasar untuk mendorong keputusan strategis. Mahir dalam analisis data dan tools business intelligence.",
@@ -85,7 +85,7 @@ const teamMembers: TeamMember[] = [
     name: "Muhamad Fajar Maulid",
     role: "UI/UX Designer",
     description:
-      "Desainer kreatif yang passionate dalam membuat pengalaman pengguna yang intuitif dan indah. Ahli dalam user research, wireframing, prototyping, dan design systems yang memuaskan pengguna.",
+      "Desainer kreatif yang passionate dalam membuat pengalaman pengguna yang intuitif dan indah. Ahli dalam user research dan prototyping.",
     image: "/fajar.webp",
     socials: [
       { icon: "Github", url: "https://github.com/Jars44", label: "GitHub" },
@@ -130,7 +130,13 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <div className="flex items-center justify-center gap-12 sm:gap-16 flex-wrap">
-              <img src="/sinorasi-logo-v2.webp" alt="SINORASI Logo" className="h-24 sm:h-32 lg:h-40 object-contain" />
+              <motion.img
+                src="/sinorasi-logo-v2.webp"
+                alt="SINORASI Logo"
+                className="h-24 sm:h-32 lg:h-40 object-contain"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+              />
               <span className="text-4xl sm:text-5xl lg:text-6xl text-white">×</span>
               <img src="/logo-smk.webp" alt="SMK Logo" className="h-24 sm:h-32 lg:h-40 object-contain" />
             </div>

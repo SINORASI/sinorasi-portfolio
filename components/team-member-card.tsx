@@ -36,10 +36,10 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
   };
 
   return (
-    <Card className="w-[480px] aspect-[5/4] flex-shrink-0 bg-card/80 backdrop-blur-sm border-border/30 overflow-hidden hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-500 group">
+    <Card className="w-full max-w-[480px] mx-auto lg:aspect-[5/4] flex-shrink-0 bg-card/80 backdrop-blur-sm border-border/30 overflow-hidden hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-500 group">
       <div className="flex flex-col lg:flex-row gap-2 h-full">
         {/* Image */}
-        <div className="relative w-full lg:aspect-[9/16] lg:w-auto h-64 lg:h-full lg:flex-shrink-0 overflow-hidden">
+        <div className="relative w-full aspect-[4/5] lg:aspect-[4/6] lg:w-auto h-full lg:flex-shrink-0 overflow-hidden">
           <Image
             src={member.image}
             alt={member.name}

@@ -39,7 +39,7 @@ export const exampleTeamMembers: TeamMember[] = [
   {
     name: "Muhamad Fajar Maulid",
     role: "UI/UX Designer",
-    description: "Creative designer focused on user-centered design principles.",
+    description: "Creative UI/UX designer focused on user-centered design.",
     image: "/team/sarah.jpg", // Using local image from /public/team/
     socials: [
       { icon: "Globe", url: "https://sarahchen.design", label: "Portfolio" },
