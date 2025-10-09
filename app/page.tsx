@@ -134,8 +134,6 @@ export default function Home() {
                 src="/sinorasi-logo-v2.webp"
                 alt="SINORASI Logo"
                 className="h-24 sm:h-32 lg:h-40 object-contain"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
               />
               <span className="text-4xl sm:text-5xl lg:text-6xl text-white">×</span>
               <img src="/logo-smk.webp" alt="SMK Logo" className="h-24 sm:h-32 lg:h-40 object-contain" />

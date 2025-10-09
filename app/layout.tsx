@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description: "Kenali tim SINORASI dari SMKN2SGS - inovator berbakat yang membangun masa depan website sekolah dengan keahlian di DevOps, desain, analisis bisnis, dan pembuatan konten.",
   keywords: ["SINORASI", "SMKN2SGS", "portofolio tim", "inovasi digital", "pengembangan web", "desain UI/UX", "DevOps"],
   authors: [{ name: "Tim SINORASI" }],
+  icons: {
+    icon: "/sinorasi-logo-v2.webp",
+  },
   openGraph: {
     title: "Tim SINORASI | Portofolio Inovasi Digital",
     description: "Kenali tim berbakat di balik SINORASI, menggabungkan kreativitas, teknologi, dan inovasi untuk membangun pengalaman digital yang luar biasa.",
